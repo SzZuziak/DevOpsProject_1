@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: mongodb-pod
   labels:
-    app: mongo
+    db: mongodb
 spec:
   containers:
     - name: mongodb

@@ -1,6 +1,7 @@
 minikube start
 Start-sleep -s 120
 
+Start-Job -ScriptBlock {minikube tunnel}
 Start-Job -ScriptBlock {kubectl port-forward --namespace kube-system 5000:5000}
 
 Start-sleep -s 20

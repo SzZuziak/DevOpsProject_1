@@ -3,10 +3,8 @@ kind: Pod
 metadata:
   name: mongodb-api-pod
   labels:
-    name: mongo
+    app: mongo-api
 spec:
   containers:
   - name: mongodb-api-pod
     image: localhost:5000/mongo-api:v1.0
-    ports:
-      - containerPort: 8080
