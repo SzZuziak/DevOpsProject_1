@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mongodb-api-pod
+  labels:
+    app: mongo-api
+spec:
+  containers:
+  - name: mongodb-api-pod
+    image: localhost:5000/mongo-api-v1.3
+
+    volumeMounts:
+    - mountPath: /app/config
+      name: api-mongo-configmap
+  volumes: 
+  - name: api-mongo-configmap
+    configMap:
+      name: api-mongo-configmap
+      

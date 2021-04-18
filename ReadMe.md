@@ -2,6 +2,8 @@ Stack:
 K8s - minikube project
 Docker
 Git
+Mongo
+ASP.Net Core
 
 #######################
 Local Docker registry:
@@ -25,3 +27,19 @@ Ingress
 https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 
 1)minikube addons enable ingress
+
+###################
+External K8s
+
+1) minikube tunnel
+
+#####################
+Configmaps
+Create Configmap from file <3:
+kubectl create configmap api-mongo-configmap --from-file=appsettings.json --output yaml
+
+update configMap:
+kubectl create configmap api-mongo-configmap --dry-run -o yaml  | kubectl apply -f -
+
+Open running pod
+kubectl exec -i -t mongodb-api-pod -- /bin/bash
