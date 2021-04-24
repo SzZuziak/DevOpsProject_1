@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,3 +17,10 @@ spec:
         image: localhost:5000/mongo
         ports:
           - containerPort: 27017
+        volumeMounts:
+        - mountPath: /data/db
+          name: storage-pv
+      volumes:
+        - name: storage-pv
+          persistentVolumeClaim:
+            claimName: storage-pvc
