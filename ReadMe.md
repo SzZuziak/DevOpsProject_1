@@ -48,3 +48,8 @@ https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 
 ### Scale:
 - kubectl scale deploy/mongo-api --replicas 8
+
+## Base of knowledge:
+- How does Kubernetes create a Pod? https://www.youtube.com/watch?v=BgrQ16r84pM
+- Volumes https://www.youtube.com/watch?v=0swOh5C3OVM
+
