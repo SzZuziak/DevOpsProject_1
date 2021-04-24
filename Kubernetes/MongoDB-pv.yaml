@@ -11,7 +11,7 @@ spec:
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle
-  storageClassName: slow
+  storageClassName: manual
   hostPath:
     path: "C:/pv"
 
