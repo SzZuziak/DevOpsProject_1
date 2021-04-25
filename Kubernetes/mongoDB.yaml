@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongodb
+      db: mongodb
   template:
     metadata:
       labels:
-        app: mongodb
+        db: mongodb
     spec:
       containers:
       - name: mongodb
