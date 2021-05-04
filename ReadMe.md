@@ -49,7 +49,32 @@ https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 ### Scale:
 - kubectl scale deploy/mongo-api --replicas 8
 
-## Base of knowledge:
+# Helm
+- Add repository for Helm:
+~~~
+helm repo add stable https://charts.helm.sh/stable
+~~~
+- Install Prometheus by Helm:
+~~~
+helm install prometheus stable/prometheus-operator
+~~~
+
+# Base of knowledge:
 - How does Kubernetes create a Pod? https://www.youtube.com/watch?v=BgrQ16r84pM
-- Volumes https://www.youtube.com/watch?v=0swOh5C3OVM
+### Volumes
+- https://www.youtube.com/watch?v=0swOh5C3OVM
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-persistent-volume-storage/
+
+### Logs
+- K8s https://kubernetes.io/docs/concepts/cluster-administration/logging/
+- Docker logging drivers https://docs.docker.com/config/containers/logging/configure/
+
+### Namespaces
+- https://www.youtube.com/watch?v=K3jNo4z5Jx8&t=6s
+
+### Prometheus
+- https://www.youtube.com/watch?v=h4Sl21AKiDg&t=359s
+
+### Helm
+- Installation Win https://medium.com/@JockDaRock/take-the-helm-with-kubernetes-on-windows-c2cd4373104b
 
