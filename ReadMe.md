@@ -8,7 +8,7 @@
 
 # Logic schema:
 
-![Image of Yaktocat](/documentation/logicSchema.png)
+![Img](/documentation/logicSchema.png)
 
 # Local Docker registry:
 
