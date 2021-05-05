@@ -6,6 +6,10 @@
 - Mongo
 - ASP.Net Core
 
+# Logic schema:
+
+![Image of Yaktocat](/documentation/logicSchema.png)
+
 # Local Docker registry:
 
 ### Link
@@ -48,6 +52,13 @@ https://kubernetes.io/docs/tasks/access-application-cluster/ingress-minikube/
 
 ### Scale:
 - kubectl scale deploy/mongo-api --replicas 8
+
+# Prometheus
+- Prometheus installation:
+~~~
+helm install prometheus stable/prometheus-operator --namespace monitoring
+~~~
+
 
 # Helm
 - Add repository for Helm:
