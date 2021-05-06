@@ -69,6 +69,15 @@ helm repo add stable https://charts.helm.sh/stable
 ~~~
 helm install prometheus stable/prometheus-operator
 ~~~
+- Add repo with mongodb exporter
+~~~
+helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+helm repo update
+~~~
+- Check with params can be overwiten during installation
+~~~
+helm show values prometheus-community/prometheus-mongodb-exporter
+~~~
 
 # Base of knowledge:
 - How does Kubernetes create a Pod? https://www.youtube.com/watch?v=BgrQ16r84pM
