@@ -1,11 +1,3 @@
-# Stack:
-- K8s 
-- minikube project
-- Docker
-- Git
-- Mongo
-- ASP.Net Core
-
 # Logic schema:
 
 ![Img](/documentation/logicSchema.png)
@@ -78,6 +70,15 @@ helm repo update
 ~~~
 helm show values prometheus-community/prometheus-mongodb-exporter
 ~~~
+- Installation with param from files:
+~~~
+helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter -f .\prometheus-mongodb-exporter-values-helm.yaml
+~~~
+- Show release
+~~~
+Helm ls
+~~~
+
 
 # Base of knowledge:
 - How does Kubernetes create a Pod? https://www.youtube.com/watch?v=BgrQ16r84pM
