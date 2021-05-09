@@ -20,6 +20,16 @@ spec:
         volumeMounts:
         - mountPath: /data/db
           name: storage-pv
+        livenessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          tcpSocket:
+            port: 27017
+        readinessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          tcpSocket:
+            port: 27017
       volumes:
         - name: storage-pv
           persistentVolumeClaim:
