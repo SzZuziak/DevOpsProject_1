@@ -19,8 +19,19 @@ spec:
         - mountPath: /app/appsettings.json
           name: api-configmap
           subPath: appsettings.json
+        livenessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          tcpSocket:
+            port: 5004
+        readinessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          tcpSocket:
+            port: 5004
       volumes: 
       - name: api-configmap
         configMap:
           name: api-mongo-configmap
+
       
