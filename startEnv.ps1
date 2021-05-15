@@ -1,5 +1,5 @@
 $wait = 60
-minikube start
+minikube start --driver=hyperv
 Start-sleep -s $wait
 
 Start-Job -ScriptBlock {kubectl port-forward --namespace kube-system 5000:5000}
