@@ -5,7 +5,7 @@ metadata:
   namespace: jenkins
 spec:
   selector:
-    db: jenkins-server
+    app: jenkins-server
   ports:
   - protocol: TCP
     port: 8080
