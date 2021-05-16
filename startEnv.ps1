@@ -9,5 +9,5 @@ $registryPodName = kubectl get pod -n kube-system | Select-String -Pattern $patt
 Start-Job -ScriptBlock {kubectl port-forward $Using:registryPodName.Value --namespace kube-system 5000:5000}
 
 Start-sleep -s $wait
-docker run --rm -d --network=host -v /mnt/registry:/var/lib/registry alpine ash -c $registryConf
+docker run --rm -d --network=host -v K8sRegistry:/var/lib/registry alpine ash -c $registryConf
 Start-sleep -s $wait
