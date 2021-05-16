@@ -1,4 +1,3 @@
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,10 +17,10 @@ spec:
       - name: jenkins
         image: localhost:5000/jenkins_v1
         ports:
-           - name: httpport
-             containerPort: 8080
-           - name: jnlpport
-             containerPort: 50000
+          - name: httpport
+            containerPort: 8080
+          - name: jnlpport
+            containerPort: 50000
         volumeMounts:
         - mountPath: /var/jenkins_home
           name: jenkins-configmap
