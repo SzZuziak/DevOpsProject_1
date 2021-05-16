@@ -36,5 +36,5 @@ spec:
             port: 8080
       volumes: 
       - name: jenkins-configmap
-        configMap:
-          name: jenkins-pvc
+        persistentVolumeClaim:
+          claimName: jenkins-pvc
