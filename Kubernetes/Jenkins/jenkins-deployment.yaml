@@ -1,0 +1,41 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: jenkins
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-server
+  template:
+    metadata:
+      labels:
+        app: jenkins-server
+    spec:
+      containers:
+      - name: jenkins
+        image: localhost:5000/jenkins_v1
+        ports:
+           - name: httpport
+             containerPort: 8080
+           - name: jnlpport
+             containerPort: 50000
+        volumeMounts:
+        - mountPath: /var/jenkins_home
+          name: jenkins-configmap
+        livenessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 5
+          tcpSocket:
+            port: 8080
+        readinessProbe:
+          initialDelaySeconds: 20
+          periodSeconds: 5
+          tcpSocket:
+            port: 8080
+      volumes: 
+      - name: jenkins-configmap
+        configMap:
+          name: jenkins-pvc-configmap
