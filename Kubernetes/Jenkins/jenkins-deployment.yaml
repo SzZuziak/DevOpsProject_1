@@ -38,4 +38,4 @@ spec:
       volumes: 
       - name: jenkins-configmap
         configMap:
-          name: jenkins-pvc-configmap
+          name: jenkins-pvc
