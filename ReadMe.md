@@ -79,6 +79,21 @@ helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter -
 Helm ls
 ~~~
 # Jenkins
+## K8s
+1. Create user
+~~~
+kubectl apply -f .\ServiceAccount\jenkins-user.yaml
+~~~
+2. Create ClusterRole
+~~~
+kubectl apply -f .\ServiceAccount\ClusterRole-jenkins.yaml
+~~~
+3. Create ClusterRoleBinding
+~~~
+kubectl apply -f .\ServiceAccount\ClusterRoleBinding.yaml
+~~~
+
+## Docker
 ~~~
 docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
 ~~~
