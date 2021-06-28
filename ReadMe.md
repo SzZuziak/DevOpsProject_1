@@ -78,6 +78,25 @@ helm install mongodb-exporter prometheus-community/prometheus-mongodb-exporter -
 ~~~
 Helm ls
 ~~~
+___
+## Own charts strategy:
+### Create template chart
+~~~
+helm create MongoApiChart
+~~~
+### Instal helm chart 
+~~~
+helm install mongoapi-chart .
+~~~
+### Fallback
+~~~
+helm rollback mongoapi-chart 
+~~~
+### Upgrade of installed chart
+~~~
+helm upgrade mongoapi-chart-1624911740 .
+~~~
+
 # Jenkins
 ## K8s
 1. Create user
