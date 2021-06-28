@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mongo-api
-        image: localhost:5000/mongo-api-v1.3
+        image: {{.Values.image}}
         volumeMounts:
         - mountPath: /app/appsettings.json
           name: api-configmap
