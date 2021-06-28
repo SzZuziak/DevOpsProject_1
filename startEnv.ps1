@@ -1,3 +1,4 @@
+minikube stop
 $wait = 20
 $pattern = "registry-(?!proxy)[a-z0-9]{5}"
 $registryConf = "apk add socat && socat TCP-LISTEN:5000,reuseaddr,fork TCP:host.docker.internal:5000"

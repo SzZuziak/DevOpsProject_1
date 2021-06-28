@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongodb-api-service
+spec:
+  selector:
+    app: mongo-api
+  ports:
+  - port: 5004
+    targetPort: 5004
